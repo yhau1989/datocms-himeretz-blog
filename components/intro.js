@@ -4,7 +4,7 @@ export default function Intro() {
       <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
         Blog.
       </h1>
-      <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
+      {/* <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
         A statically generated blog example using{' '}
         <a
           href="https://nextjs.org/"
@@ -20,7 +20,7 @@ export default function Intro() {
           DatoCMS
         </a>
         .
-      </h4>
+      </h4> */}
     </section>
   )
 }
