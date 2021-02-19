@@ -27,6 +27,9 @@ export async function getStaticProps({ preview }) {
           slug
           excerpt
           date
+          category {
+            name
+          }
           coverImage {
             responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
               ...responsiveImageFragment
@@ -71,6 +74,8 @@ export default function Index({ subscription }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   const metaTags = blog.seo.concat(site.favicon);
+
+  console.log('more post', morePosts);
 
   return (
     <>

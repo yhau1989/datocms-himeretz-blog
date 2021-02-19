@@ -36,6 +36,9 @@ export async function getStaticProps({ params, preview = false }) {
           slug
           content(markdown: true)
           date
+          category {
+            name
+          }
           ogImage: coverImage{
             url(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 })
           }
@@ -57,6 +60,9 @@ export async function getStaticProps({ params, preview = false }) {
           slug
           excerpt
           date
+          category {
+            name
+          }
           coverImage {
             responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
               ...responsiveImageFragment

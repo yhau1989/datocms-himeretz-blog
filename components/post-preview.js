@@ -10,6 +10,7 @@ export default function PostPreview({
   excerpt,
   author,
   slug,
+  category
 }) {
   return (
     <div>
@@ -24,9 +25,14 @@ export default function PostPreview({
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
           <a className="hover:underline">{title}</a>
         </Link>
+        
       </h3>
-      <div className="text-lg mb-4">
+      <div className="text-md mb-4 flex items-end">
         <Date dateString={date} />
+        <span className="px-2"> · </span>
+        <div className="font-bold cursor-pointer hover:underline leading-snug">
+        {category.name}
+        </div>
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <Avatar name={author.name} picture={author.picture} />
