@@ -1,6 +1,6 @@
 {
   "name": "Himeretz Blog",
-  "description": "Simple blog website built with Next.js and DatoCMS, with real-time updates in preview mode",
+  "description": "Himeretz Blog",
   "previewImage": "https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1613363200/himeretz/Himeretz_Logo_Mesa_de_trabajo_1_copia_4_parz6h.jpg",
   "datocmsProjectId": "23796",
   "deploymentType": "static",

@@ -13,6 +13,7 @@ export default function MoreStories({ posts }) {
             key={post.slug}
             title={post.title}
             coverImage={post.coverImage}
+            urlCoverImage={post.urlCoverImg}
             date={post.date}
             author={post.author}
             slug={post.slug}

@@ -36,6 +36,7 @@ export async function getStaticProps({ params, preview = false }) {
           slug
           content(markdown: true)
           date
+          urlCoverImg
           category {
             name
           }
@@ -60,6 +61,7 @@ export async function getStaticProps({ params, preview = false }) {
           slug
           excerpt
           date
+          urlCoverImg
           category {
             name
           }
@@ -117,7 +119,8 @@ export default function Post({ subscription, preview }) {
         <article>
           <PostHeader
             title={post.title}
-            coverImage={post.coverImage}
+            coverImage={ post.coverImage != null ? post.coverImage.responsiveImage : null}
+            urlCoverImg={post.urlCoverImg}
             date={post.date}
             author={post.author}
           />

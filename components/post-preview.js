@@ -6,6 +6,7 @@ import Link from 'next/link'
 export default function PostPreview({
   title,
   coverImage,
+  urlCoverImage,
   date,
   excerpt,
   author,
@@ -18,7 +19,8 @@ export default function PostPreview({
         <CoverImage
           slug={slug}
           title={title}
-          responsiveImage={coverImage.responsiveImage}
+          responsiveImage={ coverImage != null ? coverImage.responsiveImage : null}
+          urlResponsiveImage={urlCoverImage}
         />
       </div>
       <h3 className="text-3xl mb-3 leading-snug">
@@ -30,9 +32,12 @@ export default function PostPreview({
       <div className="text-md mb-4 flex items-end">
         <Date dateString={date} />
         <span className="px-2"> · </span>
-        <div className="font-bold cursor-pointer hover:underline leading-snug">
-        {category.name}
-        </div>
+        {
+          category &&  <div className="font-bold cursor-pointer hover:underline leading-snug">
+          {category.name}
+          </div>
+        }
+       
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <Avatar name={author.name} picture={author.picture} />

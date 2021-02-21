@@ -27,6 +27,7 @@ export async function getStaticProps({ preview }) {
           slug
           excerpt
           date
+          urlCoverImg
           category {
             name
           }
@@ -75,8 +76,6 @@ export default function Index({ subscription }) {
   const morePosts = allPosts.slice(1);
   const metaTags = blog.seo.concat(site.favicon);
 
-  console.log('more post', morePosts);
-
   return (
     <>
       <Layout preview={subscription.preview}>
@@ -87,6 +86,7 @@ export default function Index({ subscription }) {
             <HeroPost
               title={heroPost.title}
               coverImage={heroPost.coverImage}
+              urlCoverImg={heroPost.urlCoverImg}
               date={heroPost.date}
               author={heroPost.author}
               slug={heroPost.slug}
