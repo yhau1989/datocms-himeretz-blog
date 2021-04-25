@@ -1,4 +1,28 @@
 /* purgecss start ignore */
+.topLabel {
+    background: linear-gradient(
+      to right, 
+      #B5EF65, 
+      #3BB57E
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .topLabel2 {
+    background: linear-gradient(
+      to right, 
+      #283240, 
+      #090D11
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .link_social{
+    color: #B5EF65;
+  }
+
 @tailwind base;
 @tailwind components;
 /* purgecss end ignore */

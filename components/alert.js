@@ -4,14 +4,20 @@ import cn from 'classnames'
 export default function Alert({ preview }) {
   return (
     <div
-      className={cn('border-b', {
-        'bg-accent-7 border-accent-7 text-white': preview,
-        'bg-accent-1 border-accent-2': !preview,
-      })}
+      // className={cn('border-b', {
+      //   'bg-accent-7 border-accent-7 text-white': preview,
+      //   'bg-accent-1 border-accent-2': !preview,
+      // })}
+      className="bg-gradient-to-br from-gray-800 via-gray-900 to-black"
     >
       <Container>
         <div className="py-2 text-center text-sm">
-          {preview ? (
+          <span className="topLabel">
+          Muy pronto podras comprar nuestra tienda online 
+          <a href="#" className="topLabel"><strong> www.himeretz.com</strong></a>
+          </span>
+          
+          {/* {preview ? (
             <>
               This is page is showing draft content.{' '}
               <a
@@ -33,7 +39,7 @@ export default function Alert({ preview }) {
               </a>{' '}
               to enter preview mode!
             </>
-          )}
+          )} */}
         </div>
       </Container>
     </div>

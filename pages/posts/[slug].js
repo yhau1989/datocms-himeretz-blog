@@ -9,6 +9,10 @@ import PostHeader from "../../components/post-header";
 import SectionSeparator from "../../components/section-separator";
 import { request } from "../../lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../../lib/fragments";
+import { useRouter } from 'next/router'
+import SocialShare from '../../components/social-share';
+
+
 
 export async function getStaticPaths() {
   const data = await request({ query: `{ allPosts { slug } }` });
@@ -20,6 +24,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params, preview = false }) {
+  
   const graphqlRequest = {
     query: `
       query PostBySlug($slug: String) {
@@ -109,6 +114,9 @@ export default function Post({ subscription, preview }) {
     data: { site, post, morePosts },
   } = useQuerySubscription(subscription);
 
+  const router = useRouter();
+
+
   const metaTags = post.seo.concat(site.favicon);
 
   return (
@@ -125,6 +133,8 @@ export default function Post({ subscription, preview }) {
             author={post.author}
           />
           <PostBody content={post.content} />
+          
+          <SocialShare urlpost={router.asPath} tittle={post.title} />
         </article>
         <SectionSeparator />
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
