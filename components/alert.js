@@ -13,7 +13,7 @@ export default function Alert({ preview }) {
       <Container>
         <div className="py-2 text-center text-sm">
           <span className="topLabel">
-          Muy pronto podras comprar nuestra tienda online 
+          Muy pronto podrás comprar nuestra tienda online 
           <a href="#" className="topLabel"><strong> www.himeretz.com</strong></a>
           </span>
           
