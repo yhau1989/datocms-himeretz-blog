@@ -1,5 +1,6 @@
 import Container from "./container";
 import { INSTAGRAM_URL, FACEBOOK_URL, TIKTOK_URL } from "../lib/constants";
+import FooterLogo from './footer-logo'
 
 export default function Footer() {
   return (
@@ -7,7 +8,8 @@ export default function Footer() {
       <Container>
         <div className="py-28 flex flex-col lg:flex-row items-center ">
           <h3 className="topLabel text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2 ">
-            Síguenos en nuetras redes
+            <FooterLogo className="w-64"></FooterLogo>
+            {/* Síguenos en nuetras redes */}
           </h3>
           <div className="flex flex-row justify-center items-center lg:pl-4 lg:w-1/2 ">
             <a
