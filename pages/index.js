@@ -81,11 +81,11 @@ export default function Index({ subscription }) {
       <Layout preview={subscription.preview}>
         <Head>
           {renderMetaTags(metaTags)}
-          '
           <meta
             name="keywords"
             content="jabones, artesanales, ecologicos, naturales, cosmetica, natural, zerowaste, cero, residuos"
           />
+          <script async src="https://cdn.splitbee.io/sb.js"></script>
         </Head>
         <Container>
           <Intro />
